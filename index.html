@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Spotify-Style Music Player</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Font Awesome for beautiful icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+<div class="player-container">
+  <div class="now-playing">
+    <h2 id="title">Song Title</h2>
+    <p id="artist">Artist Name</p>
+  </div>
+
+  <audio id="audio"></audio>
+
+  <!-- Modern icon-based buttons -->
+  <div class="controls">
+    <button id="prev" class="control-btn"><i class="fas fa-backward"></i></button>
+    <button id="play" class="control-btn"><i class="fas fa-play"></i></button>
+    <button id="next" class="control-btn"><i class="fas fa-forward"></i></button>
+  </div>
+
+  <div class="time-controls">
+    <span id="current-time">0:00</span>
+    <input type="range" id="progress" value="0" max="100" />
+    <span id="duration">0:00</span>
+  </div>
+
+  <div class="volume-control">
+    <label><i class="fas fa-volume-up"></i></label>
+    <input type="range" id="volume" min="0" max="1" step="0.01" value="1" />
+  </div>
+
+  <div class="playlist">
+    <h3>Playlist</h3>
+    <ul id="playlist"></ul>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
